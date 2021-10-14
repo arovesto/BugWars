@@ -6,6 +6,7 @@
 
 void Bullet::OnStart(Point)
 {
+	disabled = false;
 }
 
 void Bullet::OnUpdate(float dt)

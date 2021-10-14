@@ -2,6 +2,8 @@
 #include "Bug.h"
 #include "Game.h"
 
+float near_enough = 100;
+
 void Bug::OnUpdate(float dt)
 {
 }
@@ -31,7 +33,6 @@ BugBase* Bug::FindBugToEat() const
 			}
 		}
 	}
-
 	return target;
 }
 
