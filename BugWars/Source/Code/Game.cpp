@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "Game.h"
+#include "GameBase/Log.h"
 #include "Tank.h"
 #include "Bug.h"
 #include "Bullet.h"
@@ -64,6 +65,7 @@ void Game::OnRender() const
 void Game::AddObject(GameObject* object)
 {
 	to_add.push_back(object);
+	if (object->GetRTTI() == Bug::s_RTTI) Log("I'm a bug");
 }
 
 void Game::OnBugsSpawned()

@@ -2,7 +2,7 @@
 #include "Bug.h"
 #include "Game.h"
 
-float near_enough = 100;
+IMPLEMENT_RTTI(Bug);
 
 void Bug::OnUpdate(float dt)
 {
