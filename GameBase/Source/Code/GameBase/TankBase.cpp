@@ -44,12 +44,7 @@ void TankBase::Shoot()
 
 	auto bullet = g_GameBase->creators.bullet_creator();
 	g_GameBase->AddObject(bullet);
-<<<<<<< HEAD
-	bullet->Start(CalcShootDirection());
-=======
-
 	bullet->Start(CalcShootDirection(bug->position, bug->direction, BugBase::s_Velocity, BulletBase::s_Velocity));
->>>>>>> 311fe9b919817d77916daa58b85fb34bb5707c99
 	numShots++;
 }
 

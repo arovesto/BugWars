@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "Tank.h"
+#include <GameBase/Log.h>
 
 bool WillHitTarget(Point tank_pos, Point target_pos, Point target_dir,
 	float target_vel, float bullet_vel)
@@ -9,6 +10,7 @@ bool WillHitTarget(Point tank_pos, Point target_pos, Point target_dir,
 
 	tank.position = tank_pos;
 	auto shoot_dir = tank.CalcShootDirection(target_pos, target_dir, target_vel, bullet_vel).Normalized();
+	Log("target is {} dir is {}", target_pos, shoot_dir);
 
 	const uint max_step_count = 10000;
 	const float dt = 0.1f;
